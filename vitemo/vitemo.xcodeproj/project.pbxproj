@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC5B913F1B25AFE4005D7562 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B913E1B25AFE4005D7562 /* main.swift */; };
+		AC5B914F1B25B6C5005D7562 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91451B25B68E005D7562 /* Box.framework */; };
+		AC5B91501B25B6C5005D7562 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91461B25B68E005D7562 /* LlamaKit.framework */; };
+		AC5B91511B25B6C5005D7562 /* Mustache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91471B25B68E005D7562 /* Mustache.framework */; };
+		AC5B91521B25B6C5005D7562 /* OptionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91481B25B68E005D7562 /* OptionKit.framework */; };
+		AC5B91531B25B6C5005D7562 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91491B25B68E005D7562 /* Result.framework */; };
+		AC5B91551B25CF87005D7562 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B91541B25CF87005D7562 /* utils.swift */; };
+		AC5B91571B25DE5F005D7562 /* SwiftFilePath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91561B25DE5F005D7562 /* SwiftFilePath.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC5B91391B25AFE4005D7562 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AC5B913B1B25AFE4005D7562 /* vitemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vitemo; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5B913E1B25AFE4005D7562 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AC5B91451B25B68E005D7562 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/Mac/Box.framework; sourceTree = "<group>"; };
+		AC5B91461B25B68E005D7562 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/Mac/LlamaKit.framework; sourceTree = "<group>"; };
+		AC5B91471B25B68E005D7562 /* Mustache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mustache.framework; path = Carthage/Build/Mac/Mustache.framework; sourceTree = "<group>"; };
+		AC5B91481B25B68E005D7562 /* OptionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OptionKit.framework; path = Carthage/Build/Mac/OptionKit.framework; sourceTree = "<group>"; };
+		AC5B91491B25B68E005D7562 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		AC5B91541B25CF87005D7562 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		AC5B91561B25DE5F005D7562 /* SwiftFilePath.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftFilePath.framework; path = Carthage/Build/iOS/SwiftFilePath.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC5B91381B25AFE4005D7562 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5B914F1B25B6C5005D7562 /* Box.framework in Frameworks */,
+				AC5B91501B25B6C5005D7562 /* LlamaKit.framework in Frameworks */,
+				AC5B91511B25B6C5005D7562 /* Mustache.framework in Frameworks */,
+				AC5B91521B25B6C5005D7562 /* OptionKit.framework in Frameworks */,
+				AC5B91571B25DE5F005D7562 /* SwiftFilePath.framework in Frameworks */,
+				AC5B91531B25B6C5005D7562 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC5B91321B25AFE4005D7562 = {
+			isa = PBXGroup;
+			children = (
+				AC5B91561B25DE5F005D7562 /* SwiftFilePath.framework */,
+				AC5B91451B25B68E005D7562 /* Box.framework */,
+				AC5B91461B25B68E005D7562 /* LlamaKit.framework */,
+				AC5B91471B25B68E005D7562 /* Mustache.framework */,
+				AC5B91481B25B68E005D7562 /* OptionKit.framework */,
+				AC5B91491B25B68E005D7562 /* Result.framework */,
+				AC5B913D1B25AFE4005D7562 /* vitemo */,
+				AC5B913C1B25AFE4005D7562 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC5B913C1B25AFE4005D7562 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC5B913B1B25AFE4005D7562 /* vitemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC5B913D1B25AFE4005D7562 /* vitemo */ = {
+			isa = PBXGroup;
+			children = (
+				AC5B913E1B25AFE4005D7562 /* main.swift */,
+				AC5B91541B25CF87005D7562 /* utils.swift */,
+			);
+			path = vitemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC5B913A1B25AFE4005D7562 /* vitemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5B91421B25AFE4005D7562 /* Build configuration list for PBXNativeTarget "vitemo" */;
+			buildPhases = (
+				AC5B91371B25AFE4005D7562 /* Sources */,
+				AC5B91381B25AFE4005D7562 /* Frameworks */,
+				AC5B91391B25AFE4005D7562 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vitemo;
+			productName = vitemo;
+			productReference = AC5B913B1B25AFE4005D7562 /* vitemo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC5B91331B25AFE4005D7562 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = jms;
+				TargetAttributes = {
+					AC5B913A1B25AFE4005D7562 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = AC5B91361B25AFE4005D7562 /* Build configuration list for PBXProject "vitemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AC5B91321B25AFE4005D7562;
+			productRefGroup = AC5B913C1B25AFE4005D7562 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC5B913A1B25AFE4005D7562 /* vitemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC5B91371B25AFE4005D7562 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5B913F1B25AFE4005D7562 /* main.swift in Sources */,
+				AC5B91551B25CF87005D7562 /* utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AC5B91401B25AFE4005D7562 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC5B91411B25AFE4005D7562 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AC5B91431B25AFE4005D7562 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC5B91441B25AFE4005D7562 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC5B91361B25AFE4005D7562 /* Build configuration list for PBXProject "vitemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5B91401B25AFE4005D7562 /* Debug */,
+				AC5B91411B25AFE4005D7562 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5B91421B25AFE4005D7562 /* Build configuration list for PBXNativeTarget "vitemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5B91431B25AFE4005D7562 /* Debug */,
+				AC5B91441B25AFE4005D7562 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC5B91331B25AFE4005D7562 /* Project object */;
+}

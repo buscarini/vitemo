@@ -1,0 +1,10 @@
+
+github "antitypical/Result" ~> 0.4.3
+
+# github "nomothetis/OptionKit" ~> 0.2.0
+github "jakeheis/SwiftCLI"
+
+github "groue/GRMustache.swift" == 0.9.2
+
+github "buscarini/SwiftFilePath" "master"
+
