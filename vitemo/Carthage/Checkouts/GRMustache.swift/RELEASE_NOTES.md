@@ -2,7 +2,20 @@ Release Notes
 =============
 
 
+## v0.9.3
+
+Released on June 9, 2015
+
+**Breaking changes**
+
+- There is no longer any automatic conversion between Swift and Objective-C numeric types beyond conversions provided by the Swift language itself. For example, a filter of `Int` no longer accepts `Double` inputs. The `MustacheBox.intValue`, `uintValue`, `doubleValue` properties that performed those conversions are removed.
+
+- High-level APIs that would build filters of non-optional values are removed. It is now the responsability of the library user to handle values that are missing or of the wrong type.
+
+
 ## v0.9.2
+
+Released on June 7, 2015
 
 **Fixed**
 

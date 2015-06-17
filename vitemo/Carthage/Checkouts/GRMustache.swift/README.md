@@ -5,7 +5,7 @@ GRMustache.swift is a [Mustache](http://mustache.github.io) template engine writ
 
 It ships with built-in goodies and extensibility hooks that let you avoid the strict minimalism of the genuine Mustache language when you need it.
 
-**June 7, 2015: GRMustache.swift 0.9.2 is out.** [Release notes](RELEASE_NOTES.md)
+**June 9, 2015: GRMustache.swift 0.9.3 is out.** [Release notes](RELEASE_NOTES.md)
 
 Get release announcements and usage tips: follow [@GRMustache on Twitter](http://twitter.com/GRMustache).
 
@@ -81,7 +81,7 @@ To use GRMustache.swift with Cocoapods, specify in your Podfile:
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-pod 'GRMustache.swift', '0.9.2'
+pod 'GRMustache.swift', '0.9.3'
 ```
 
 
@@ -92,7 +92,7 @@ pod 'GRMustache.swift', '0.9.2'
 To use GRMustache.swift with Carthage, specify in your Cartfile:
 
 ```
-github "groue/GRMustache.swift" == 0.9.2
+github "groue/GRMustache.swift" == 0.9.3
 ```
 
 
@@ -112,26 +112,26 @@ Mustache is a cross-platform templating system supported by [many languages](htt
 You'll find in the repository a `Mustache.xcworkspace` workspace that contains a Playground and demo applications.
 
 
-### Inline documentation
+### Reference
 
-All public types, functions and methods of the library are documented in the source code.
+All public types, functions and methods of the library are documented in the source code, and available online on [cocoadocs.org](http://cocoadocs.org/docsets/GRMustache.swift/0.9.3/index.html).
 
 The main entry points are:
 
-- the `Template` class, documented in [Template.swift](Mustache/Template/Template.swift), which loads and renders templates:
+- the `Template` class, documented in [Template.swift](Mustache/Template/Template.swift), which loads and renders templates ([read on cocoadocs.org](http://cocoadocs.org/docsets/GRMustache.swift/0.9.3/Classes/Template.html)):
     
     ```swift
     let template = Template(named: "template")!
     ```
 
-- the `Box()` functions, documented in [Box.swift](Mustache/Rendering/Box.swift), which provide data to templates:
+- the `Box()` functions, documented in [Box.swift](Mustache/Rendering/Box.swift), which provide data to templates ([read on cocoadocs.org](http://cocoadocs.org/docsets/GRMustache.swift/0.9.3/Functions.html)):
     
     ```swift
     let data = ["mustaches": ["Charles Bronson", "Errol Flynn", "Clark Gable"]]
     let rendering = template.render(Box(data))!
     ```
 
-- The `Configuration` type, documented in [Configuration.swift](Mustache/Configuration/Configuration.swift), which describes how to tune Mustache rendering:
+- The `Configuration` type, documented in [Configuration.swift](Mustache/Configuration/Configuration.swift), which describes how to tune Mustache rendering ([read on cocoadocs.org](http://cocoadocs.org/docsets/GRMustache.swift/0.9.3/Structs/Configuration.html)):
     
     ```swift
     // Have all templates render text, and avoid HTML-escaping:
@@ -302,8 +302,8 @@ Those "lambdas" are a special case of custom rendering functions. The raw `Rende
 // Define the `square` filter.
 //
 // square(n) evaluates to the square of the provided integer.
-let square = Filter { (n: Int, _) in
-    return Box(n * n)
+let square = Filter { (n: Int?, _) in
+    return Box(n! * n!)
 }
 
 
@@ -338,7 +338,7 @@ I have {{ cats.count }} {{# pluralize(cats.count) }}cat{{/ }}.
 // {{# pluralize(count) }}...{{/ }} renders the plural form of the
 // section content if the `count` argument is greater than 1.
 
-let pluralize = Filter { (count: Int, info: RenderingInfo, _) in
+let pluralize = Filter { (count: Int?, info: RenderingInfo, _) in
     
     // Pluralize the inner content of the section tag:
     var string = info.tag.innerTemplateString
@@ -371,8 +371,8 @@ let rendering = template.render(Box(data))!
 // sum(x, ...) evaluates to the sum of provided integers
 
 let sum = VariadicFilter { (boxes: [MustacheBox], _) in
-    // Extract integers out of input boxes, assuming zero for non numeric values
-    let integers = map(boxes) { (box) in box.intValue ?? 0 }
+    // Extract integers out of input boxes, assuming zero for non integer values
+    let integers = map(boxes) { (box) in (box.value as? Int) ?? 0 }
     let sum = reduce(integers, 0, +)
     return Box(sum)
 }
@@ -389,46 +389,6 @@ template.registerInBaseContext("sum", Box(sum))
 template.render(Box(["a": 1, "b": 2, "c": 3]))!
 ```
 
-
-**Filters can validate their arguments and return errors:**
-
-```swift
-// Define the `squareRoot` filter.
-//
-// squareRoot(x) evaluates to the square root of the provided double, and
-// returns an error for negative values.
-let squareRoot = Filter { (x: Double, error: NSErrorPointer) in
-    if x < 0 {
-        if error != nil {
-            error.memory = NSError(
-                domain: GRMustacheErrorDomain,
-                code: GRMustacheErrorCodeRenderingError,
-                userInfo: [NSLocalizedDescriptionKey: "Invalid negative value"])
-        }
-        return nil
-    } else {
-        return Box(sqrt(x))
-    }
-}
-
-
-// Register the squareRoot filter in our template:
-
-let template = Template(string: "√{{x}} = {{squareRoot(x)}}")!
-template.registerInBaseContext("squareRoot", Box(squareRoot))
-
-
-// √100 = 10.0
-
-let rendering = template.render(Box(["x": 100]))!
-
-
-// Error evaluating {{squareRoot(x)}} at line 1: Invalid negative value
-
-var error: NSError?
-template.render(Box(["x": -1]), error: &error)
-error!.localizedDescription
-```
 
 Filters are documented with the `FilterFunction` type in [CoreFunctions.swift](Mustache/Rendering/CoreFunctions.swift).
 

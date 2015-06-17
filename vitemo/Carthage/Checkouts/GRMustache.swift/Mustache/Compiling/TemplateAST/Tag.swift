@@ -23,6 +23,9 @@
 
 import Foundation
 
+// =============================================================================
+// MARK: - TagType
+
 /**
 The type of a tag, variable or section. See the documentation of `Tag` for more
 information.
@@ -35,6 +38,10 @@ public enum TagType {
     /// The type of section tags such as `{{#user}}...{{/user}}`.
     case Section
 }
+
+
+// =============================================================================
+// MARK: - Tag
 
 /**
 Tag instances represent Mustache tags that render values:
@@ -82,7 +89,7 @@ public class Tag: Printable {
     
         // {{# pluralize(count) }}...{{/ }} renders the plural form of the section
         // content if the `count` argument is greater than 1.
-        let pluralize = Filter { (count: Int, info: RenderingInfo, _) in
+        let pluralize = Filter { (count: Int?, info: RenderingInfo, _) in
 
             // Pluralize the inner content of the section tag:
             var string = info.tag.innerTemplateString

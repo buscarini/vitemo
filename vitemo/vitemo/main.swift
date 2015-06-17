@@ -8,32 +8,22 @@
 
 import Foundation
 import Result
-import OptionKit
+import SwiftCLI
 
-println("Hello, World!")
-
-
-
-let optTemplate = Option(trigger:.Mixed("t", "template"))
-
-let parser = OptionParser(definitions:[optTemplate])
-let actualArguments = Array(Process.arguments[1..<Process.arguments.count])
-let result = parser.parse(actualArguments)
-
-switch result {
-case .Success(let box):
-	let (options, rest) = box.unbox
-	
-	if (rest.count==0) {
-		println("Usage: vitemo module_name [-t template_name]")
-		exit(1)
-	}
-	
-	let template = options[optTemplate]?.first ?? "default"
-	
-	
-	
-	
-case .Failure(let err):
-	println(err)
+CLI.setup(name: "vitemo", version: "1.0", description: "Vitemo - VIPER template modules")
+CLI.registerChainableCommand(commandName: "init")
+	.withExecutionBlock {(arguments, options) in
+		println("Initialize")
+		return success()
 }
+CLI.registerChainableCommand(commandName: "new")
+	.withExecutionBlock {(arguments, options) in
+		println("Create template")
+		return success()
+}
+CLI.registerChainableCommand(commandName: "list")
+	.withExecutionBlock {(arguments, options) in
+		println("List available template")
+		return success()
+}
+CLI.go()

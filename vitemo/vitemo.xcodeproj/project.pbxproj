@@ -8,13 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC5B913F1B25AFE4005D7562 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B913E1B25AFE4005D7562 /* main.swift */; };
-		AC5B914F1B25B6C5005D7562 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91451B25B68E005D7562 /* Box.framework */; };
-		AC5B91501B25B6C5005D7562 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91461B25B68E005D7562 /* LlamaKit.framework */; };
-		AC5B91511B25B6C5005D7562 /* Mustache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91471B25B68E005D7562 /* Mustache.framework */; };
-		AC5B91521B25B6C5005D7562 /* OptionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91481B25B68E005D7562 /* OptionKit.framework */; };
-		AC5B91531B25B6C5005D7562 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91491B25B68E005D7562 /* Result.framework */; };
 		AC5B91551B25CF87005D7562 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B91541B25CF87005D7562 /* utils.swift */; };
-		AC5B91571B25DE5F005D7562 /* SwiftFilePath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B91561B25DE5F005D7562 /* SwiftFilePath.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,13 +26,7 @@
 /* Begin PBXFileReference section */
 		AC5B913B1B25AFE4005D7562 /* vitemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vitemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5B913E1B25AFE4005D7562 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		AC5B91451B25B68E005D7562 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/Mac/Box.framework; sourceTree = "<group>"; };
-		AC5B91461B25B68E005D7562 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/Mac/LlamaKit.framework; sourceTree = "<group>"; };
-		AC5B91471B25B68E005D7562 /* Mustache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mustache.framework; path = Carthage/Build/Mac/Mustache.framework; sourceTree = "<group>"; };
-		AC5B91481B25B68E005D7562 /* OptionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OptionKit.framework; path = Carthage/Build/Mac/OptionKit.framework; sourceTree = "<group>"; };
-		AC5B91491B25B68E005D7562 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
 		AC5B91541B25CF87005D7562 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
-		AC5B91561B25DE5F005D7562 /* SwiftFilePath.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftFilePath.framework; path = Carthage/Build/iOS/SwiftFilePath.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,12 +34,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC5B914F1B25B6C5005D7562 /* Box.framework in Frameworks */,
-				AC5B91501B25B6C5005D7562 /* LlamaKit.framework in Frameworks */,
-				AC5B91511B25B6C5005D7562 /* Mustache.framework in Frameworks */,
-				AC5B91521B25B6C5005D7562 /* OptionKit.framework in Frameworks */,
-				AC5B91571B25DE5F005D7562 /* SwiftFilePath.framework in Frameworks */,
-				AC5B91531B25B6C5005D7562 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,12 +43,6 @@
 		AC5B91321B25AFE4005D7562 = {
 			isa = PBXGroup;
 			children = (
-				AC5B91561B25DE5F005D7562 /* SwiftFilePath.framework */,
-				AC5B91451B25B68E005D7562 /* Box.framework */,
-				AC5B91461B25B68E005D7562 /* LlamaKit.framework */,
-				AC5B91471B25B68E005D7562 /* Mustache.framework */,
-				AC5B91481B25B68E005D7562 /* OptionKit.framework */,
-				AC5B91491B25B68E005D7562 /* Result.framework */,
 				AC5B913D1B25AFE4005D7562 /* vitemo */,
 				AC5B913C1B25AFE4005D7562 /* Products */,
 			);
@@ -115,6 +91,7 @@
 		AC5B91331B25AFE4005D7562 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = jms;
 				TargetAttributes = {
